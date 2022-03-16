@@ -1,0 +1,16 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|resources|robots\.txt|favicon\.ico)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
+SetEnv CI_ENV "development"
+
+php_value upload_max_filesize 4500M
+php_value post_max_size 4500M
+php_value memory_limit 2048M
+php_value max_file_uploads 128
+
+<FilesMatch "composer.json">
+  Deny from all
+</FilesMatch>
