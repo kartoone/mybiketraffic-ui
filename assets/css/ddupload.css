@@ -15,7 +15,7 @@ and open the template in the editor.
 {
 	border: 2px dotted #A5A5C7;
 	width: 100%;
-	color: #92AAB0;
+	color: #b0a092;
 	text-align: center;
 	vertical-align: middle;
 	padding: 10px 0px 16px 0px;
@@ -30,7 +30,7 @@ and open the template in the editor.
 }
 
 .uploader-active {
-	border-color: #0B85A1;
+	border-color: #99b6bd;
 }
 
 .uploader div.nodd {
@@ -41,7 +41,7 @@ and open the template in the editor.
 }
 
 .uploader div.browser label {
-	background-color: #5a7bc2;
+	background-color: #a9afbd;
 	padding: 5px 15px;
 	color: white;
 	padding: 6px 0px;

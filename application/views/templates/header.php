@@ -36,60 +36,40 @@ defined('BASEPATH') or exit('No direct script access allowed');
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="<?php echo site_url(''); ?>"><img src="<?php echo site_url('/assets/img/m3.png'); ?>" width="30" height="30" style="margin-bottom:5px;margin-right:10px" />MyBikeTraffic.com</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsMainMenuYo" aria-controls="navbarsMainMenuYo" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-  <?php
-  $homeactive = $this->uri->segment(1)=='home' ? 'active' : '';
-  $aboutactive = $this->uri->segment(1)=='about' ? 'active' : '';
-  $exampleactive = $this->uri->segment(1)=='example' ? 'active' : ''; '';
-  $youractive = '';
-  $importactive = '';
-  $segmentsactive = '';
-  if ($this->uri->segment(1)=='rides') {
-    $exampleactive = $this->uri->segment(2)=='public' ? 'active' : '';
-    $importactive = $this->uri->segment(2)=='import' ? 'active' : '';
-    $otheractive = $this->uri->segment(2)=='attachvideo'||$this->uri->segment(2)=='view';
-    $youractive = (!$exampleactive && !$importactive && !$otheractive) ? 'active' : '';
-  } else if ($this->uri->segment(1)=='users') {
-    $exampleactive = $this->uri->segment(2)=='public' ? 'active' : '';
-  } else if ($this->uri->segment(1)=='segments') {
-    $segmentsactive = 'active';
-  }
-  ?>
-      <div class="collapse navbar-collapse" id="navbarsMainMenuYo">
-        <ul class="navbar-nav mr-auto" style="line-height:25px">
-          <li class="nav-item <?php echo $homeactive; ?>">
-            <a class="nav-link" href="<?php echo site_url('home/'); ?>">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item <?php echo $aboutactive; ?>">
-            <a class="nav-link" href="<?php echo site_url('about/'); ?>">About</a>
-          </li>
-          <li class="nav-item <?php echo $youractive; ?>">
-            <a class="nav-link" href="<?php echo site_url('rides/'); ?>">Your&nbsp;Rides</a>
-          </li>
-          <li class="nav-item <?php echo $exampleactive; ?>">
-            <a class="nav-link" href="<?php echo site_url('example/'); ?>">Data</a>
-          </li>
-          <li class="nav-item <?php echo $segmentsactive; ?>">
-            <a class="nav-link" href="<?php echo site_url('segments/'); ?>">Segment&nbsp;Stats</a>
-          </li>
-          <li class="nav-item <?php echo $importactive; ?>">
-            <a class="nav-link" href="<?php echo site_url('rides/import'); ?>">Import</a>
-          </li>
-          <li>
-          	<a class="nav-link" href="<?php echo site_url('donate'); ?>"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate" title="Learn more about making a donation to this project" /> </a>
-          </li>
-        </ul>
-        <div style="color:white">
-        </div>
-        <!-- <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form> -->
-      </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
     <main role="main" class="container" style="max-width:100%">

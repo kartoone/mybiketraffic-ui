@@ -31,4 +31,16 @@ class Welcome extends BT_Controller {
 		$this->load->view('hello');
 		$this->load->view('templates/footer');
 	}
+	public function privacy()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('privacy');
+		$this->load->view('templates/footer');
+	}
+	public function credits()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('credits');
+		$this->load->view('templates/footer');
+	}
 }
