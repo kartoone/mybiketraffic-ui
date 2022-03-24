@@ -11,6 +11,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
     <!-- Custom styles for this template -->
     <link href="<?php echo site_url('assets/css/default.css'); ?>" rel="stylesheet">
+    <link href="<?php echo site_url('assets/css/style.css'); ?>" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo site_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">

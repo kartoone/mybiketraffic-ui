@@ -1,9 +1,20 @@
 <style>
 form {
 	display:inline;
+  color: red;
+  background-color: red;
 }
 </style>
-<h3 style="display:inline">Your rides</h3>
+<style>
+body {
+  color: lightgray;
+  background-color: lightgreen;
+}
+h1 {
+  color: green;
+}
+</style>
+<h1 style="display:inline">Your rides</h1>
 <div style="display:inline;margin-left:10px;vertical-align:text-bottom"><?= anchor('rides/import','IMPORT NEW RIDES'); ?></div>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">  
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
@@ -11,33 +22,33 @@ form {
 	echo form_open('rides/multisubmit',  ['id'=>'multiform']);
 ?>
 
-<table id="ridetable" class="table table-sm compact">
-  <thead class="thead-light">
+<table id="ridetable" class="table table-md compact">
+  <thead class="thead-dark">
       <tr>
         <th>&nbsp;</th>
         <th>&nbsp;</th>
         <th colspan="3">VEHICLE STATS</th>
-        <th colspan="6" style="border-left:1px solid #000">RIDE STATS (while radar enabled)</th>
+        <th colspan="6" style="border-left:1px solid #000">RIDE STATS</th>
         <th>&nbsp;</th>
-      </tr>
-      <tr>
+        </tr>
+        <tr>
         <th><?php echo form_checkbox('checkallmulti', 1, false, 'onclick="$(\'.checkall\').prop(\'checked\', $(this).prop(\'checked\'));"'); ?></th>
-		<th>Datetime (TZ)</th>
+		    <th>Datetime (TZ)</th>
         <th>Total</th>
         <th class="imperial">per mile</th>
         <th class="metric">per km</th>
         <th>per minute</th>
-        <th class="imperial" style="border-left:1px solid #000">Miles</th>
-        <th class="metric" style="border-left:1px solid #000">Kms</th>
+        <th class="imperial" style="border-left:0px solid #000">Miles</th>
+        <th class="metric" style="border-left:0px solid #000">Kms</th>
         <th class="imperial">Disabled <br />(miles)</th>
         <th class="metric">Disabled <br />(kms)</th>
         <th>Moving time<br />(minutes)</th>
         <th>Disabled <br />(minutes)</th>
         <th class="imperial">Avg speed<br />(mph)</th>
-		<th class="metric">Avg speed<br />(kph)</th>
+		    <th class="metric">Avg speed<br />(kph)</th>
         <th>Action</th>
       </tr>
-    </thead>
+  </thead>
     <tbody>
 <?php foreach ($rides as $ride): ?>
 <?php 
