@@ -46,12 +46,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <?php echo anchor('welcome/home','Home',['class'=>'nav-link active', 'aria-current'=>'page']); ?>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <?php echo anchor('welcome/rides','Rides',['class'=>'nav-link active', 'aria-current'=>'page']); ?>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item">
+          <?php echo anchor('welcome/ridelist','Ride List',['class'=>'nav-link active', 'aria-current'=>'page']); ?>
+        </li>
+         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>

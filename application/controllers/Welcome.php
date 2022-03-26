@@ -30,6 +30,14 @@ class Welcome extends BT_Controller {
 	}
 
 	// http://localhost/simple/welcome/hello 
+	public function home()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('home');
+		$this->load->view('templates/footer');
+	}
+
+	// http://localhost/simple/welcome/hello 
 	public function hello()
 	{
 		$this->load->view('templates/header');
@@ -59,6 +67,15 @@ class Welcome extends BT_Controller {
 		$this->data['rides'] = unserialize(file_get_contents('ridelist.txt'));
 //		ddebug($this->data['rides']);
 		$this->load->view('rides',$this->data);
+		$this->load->view('templates/footer');
+	}
+
+	// http://localhost/simple/welcome/rides 
+	public function ridelist() {
+		$this->load->view('templates/header');
+		$this->data['rides'] = unserialize(file_get_contents('ridelist.txt'));
+//		ddebug($this->data['rides']);
+		$this->load->view('ridelist',$this->data);
 		$this->load->view('templates/footer');
 	}
 
