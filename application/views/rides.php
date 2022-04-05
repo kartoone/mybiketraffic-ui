@@ -87,7 +87,7 @@ h1 {
 						?>
 						<tr>
 						  <td><?php echo form_checkbox(['name'=>'checkall[]','value'=>$ride->id,'checked'=>false,'class'=>'checkall']); ?></td>
-						  <td><span class="moving"><?php echo anchor('rides/view/'.$ride->id, $ride->localtimestr); ?></span> <?php echo $videostr; ?></td>
+						  <td><span class="moving"><?php echo anchor('https://mybiketraffic.com/rides/view/'.$ride->id, $ride->localtimestr); ?></span> <?php echo $videostr; ?></td>
 						  <td><span class="moving"><?php echo $ride->movingcars; ?></span></td>
 						  <td class="imperial" style="border-left:2px solid #000"><?php echo $ride->diststr; ?></td>
 						</tr>
