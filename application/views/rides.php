@@ -2,7 +2,6 @@
 form {
   display:inline;
   color: white;
-  background-color: yellow;
 }
 </style>
 <style>
