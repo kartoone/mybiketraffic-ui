@@ -7,7 +7,12 @@
 	<title>Document</title>
 </head>
 <body>
-
+  <div class="row justify-content-md-center">
+<a>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Circle-icons-bike.svg/2048px-Circle-icons-bike.svg.png"
+  width="300px" height="300px"
+</a>
+</div>
 <style>
 	div.col-md-6 { border:1px solid black }
 </style>
@@ -15,147 +20,32 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <div id="container-fluid">
-	<h1>Welcome to MY BIKE TRAFFIC</h1>
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
   <div class="container-fluid">
-    <!-- Control the column width, and how they should appear on different devices -->
-  <div class="row">
-	<div class="col-md-6">
-		<div class="row">
-			<div class="col-md-12">
-				STATS
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				RIDES
-				<table>
-					<tr>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-					</tr>
-					<tr>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-					</tr>
-					<tr>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-					</tr>
-					<tr>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-						<td>Ride 1</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		MAP
-	</div>
-   </div>
-<!--    <div class="row">
-      <div class="col-sm-6" style="background-color:yellow;">50%</div>
-      <div class="col-sm-6" style="background-color:orange;">50%</div>
+      <form class="row justify-content-md-center">
+  <fieldset text>
+    <legend><h3>My Bike Traffic<h3></legend>
+	<br>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label"></label>
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="User Name">
+      <label for="disabledTextut" class="form-label"></label>
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="Password">
     </div>
-    <br>
-    
-    <div class="row">
-      <div class="col-sm-4" style="background-color:yellow;">33.33%</div>
-      <div class="col-sm-4" style="background-color:orange;">33.33%</div>
-      <div class="col-sm-4" style="background-color:yellow;">33.33%</div>
-    </div>
-    <br>
-
-    <!-- Or let Bootstrap automatically handle the layout -->
-    <div class="row">
-      <div class="col-sm" style="background-color:yellow;">25%</div>
-      <div class="col-sm" style="background-color:orange;">25%</div>
-      <div class="col-sm" style="background-color:yellow;">25%</div>
-      <div class="col-sm" style="background-color:orange;">25%</div>
-    </div>
-    <br>
-    
-    <div class="row">
-      <div class="col" style="background-color:yellow;">25%</div>
-      <div class="col" style="background-color:orange;">25%</div>
-      <div class="col" style="background-color:yellow;">25%</div>
-      <div class="col" style="background-color:orange;">25%</div>
-    </div>-->
-  </div>	
-</div>
-
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </body>
 </html>
