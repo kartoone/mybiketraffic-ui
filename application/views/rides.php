@@ -19,6 +19,19 @@ h3 {
   overflow-y: scroll;
 }
 </style>
+<script>
+	function populateTop(id) {
+		$("#loading").html("Loading ride...<img src=\"/assets/img/ajax-loadert.gif\" />");
+		$.get("/welcome/ridedata/"+id,
+				null,
+				function(data) {
+					var jsondata = JSON.parse(data);
+					$("#diststr").html(jsondata['diststr']);
+					$("#loading").html("");
+				}
+			 );
+	}
+</script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">  
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 <div class="container-fluid">
@@ -29,19 +42,20 @@ h3 {
 					<div style="height:500px;">
 						<div class="row justify-content-md-center">
 							<div class="col-md-3 center"style="margin-right: 50px;margin-top: 50px;height:400px;border-radius: 50px;background: #6997ab;box-shadow:  20px 20px 60px #598091,-20px -20px 60px #79aec5;">
-							<div class="container">
-    							<ul class="nav nav-tabs">
-    								<li class="active"><a href="#">Bike Stats(TAB)</a></li>
-    								<li><a href="#">Car Stats(TAB)</a></li>
-  								</ul>
-							</div>
-								subhead 
+								<div class="container">
+    								<ul class="nav nav-tabs">
+    									<li class="active"><a href="#">Bike Stats(TAB)</a></li>
+    									<li><a href="#">Car Stats(TAB)</a></li>
+  									</ul>
+								</div>
+								<div id="topdata">
+								<span id="loading"></span>
 								<br>
 								Bike Icon image 
 								<br>	
-								average speed:     13.62 
+								average speed:     <span id="avgspeed">13.62</span>
 								<br>
-								total miles:       45
+								total miles:       <span id="diststr">45</span>
 								<br>
 								<br>
 								subhead 
@@ -53,6 +67,7 @@ h3 {
 								per miles:   3.3 
 								<br>
 								total:       65
+								</div>
 							</div>
 							<div>
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26629.495750413756!2d-86.82588801001114!3d33.45746111760029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8889193f37ce0795%3A0xe74c32794bbfc294!2sHomewood%2C%20AL!5e0!3m2!1sen!2sus!4v1648786754729!5m2!1sen!2sus" 
@@ -93,7 +108,7 @@ h3 {
 						    }
 						    $videostr .= ']';
 						?>
-						<tr>
+						<tr onclick="populateTop(<?php echo $ride->id; ?>);">
 						  
 						  <td><span class="moving"><?php echo anchor('https://mybiketraffic.com/rides/view/'.$ride->id, $ride->localtimestr); ?></span> <?php echo $videostr; ?></td>
 						  <td><span class="moving"><?php echo $ride->movingcars; ?></span></td>

@@ -29,6 +29,20 @@ class Welcome extends BT_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	// http://localhost/simple/welcome/ridedata/20659
+	public function ridedata($id) {
+		$allrides = unserialize(file_get_contents('ridelist.txt'));
+		foreach ($allrides as $ride) {
+			if ($ride->id == $id) {
+				unset($ride->geomstart);
+				unset($ride->geomfinish);
+				unset($ride->geompath);
+				echo json_encode($ride, JSON_UNESCAPED_UNICODE);
+				exit;
+			}
+		}
+	}
+
 	// http://localhost/simple/welcome/hello 
 	public function home()
 	{
