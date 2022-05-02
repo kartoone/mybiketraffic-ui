@@ -73,10 +73,9 @@ h3 {
 					<?php 
 						echo form_open('rides/multisubmit',  ['id'=>'multiform']);
 					?>
-					<table id="ridetable" class="table table-md companct;table table-hover">
+					<table id="ridetable" class="table table-md compact;table table-hover">
 					  <thead class="">
 					  	<tr>
-					       	<th><?php echo form_checkbox('checkallmulti', 1, false, 'onclick="$(\'.checkall\').prop(\'checked\', $(this).prop(\'checked\'));"'); ?></th>
 							<th>Datetime (TZ)</th>
 					       	<th>#cars</th>
 					        <th>miles</th>
@@ -95,7 +94,7 @@ h3 {
 						    $videostr .= ']';
 						?>
 						<tr>
-						  <td><?php echo form_checkbox(['name'=>'checkall[]','value'=>$ride->id,'checked'=>false,'class'=>'checkall']); ?></td>
+						  
 						  <td><span class="moving"><?php echo anchor('https://mybiketraffic.com/rides/view/'.$ride->id, $ride->localtimestr); ?></span> <?php echo $videostr; ?></td>
 						  <td><span class="moving"><?php echo $ride->movingcars; ?></span></td>
 						  <td class="imperial" style="border-left:2px solid #000"><?php echo $ride->diststr; ?></td>
